@@ -1,0 +1,60 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: #514848;
+  font-weight: 600;
+}
+a:hover {
+  color: #000;
+}
+
+.active {
+  text-shadow: 0 0 8px #514848;
+}
+body {
+  margin: 0;
+
+  min-width: 320px;
+  min-height: 100vh;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+h1 {
+  font-size: 3rem;
+  padding: 20px;
+}
+
+.image {
+  max-width: 500px;
+}
+
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-content: center;
+  gap: 50px;
+}
+
+.card img {
+  max-height: 250px;
+  object-fit: cover;
+}
+
+@media (max-width: 500px) {
+  .image {
+    max-width: 400px;
+  }
+}
