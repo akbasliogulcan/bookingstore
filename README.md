@@ -1,3 +1,10 @@
+## 🎥 Uygulama Görseli
+
+![Bookstore Demo](./images/bookstore.gif)
+
+
+
+
 # React Router Dom
 
 - React Router Dom kütüphanesi react'ın temel yapılarından biri olan SPA (Single Page Application)'a uygun olarak birden fazla sayfayı bir arada kolay bir şekilde yönetmemizi sağlar.
