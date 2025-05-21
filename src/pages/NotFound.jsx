@@ -9,8 +9,8 @@ const NotFound = () => {
     >
       <h1 className="text-nowrap">Aradığınız Ürün Bulunamadı</h1>
       <img src="/notFound.gif" className="img-fluid image " alt="" />
-      <Link className="text-white fs-4" to="/kitaplar">
-        Kitaplar Sayfasına Git
+      <Link className="text-white fs-4" to="/ürünler">
+        Ürünler Sayfasına Git
       </Link>
     </div>
   );

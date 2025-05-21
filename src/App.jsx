@@ -17,12 +17,16 @@ const App = () => {
         <Route path="/detay/:id" element={<Detail />} />
         <Route path="/ürünler" element={<Products />} />
         {/* Nested root */}
-        //*main
+        {/* //*main */}
         <Route path="/kategori" element={<Category />}>
           <Route path="hikaye" element={<Story />} /> //*Child
           <Route path="roman" element={<Noval />} /> //*Child
         </Route>
+        {/* NotFound için route */}
+        <Route path="/notfound" element={<Notfound />} />
+        {/* Belirtilen routeların haricinde bir route yönlendirme yapılırsa  Not Found sayfasına yönlendir. */}
         <Route path="*" element={<Notfound />} />
+        //* 27.satır eğerki url yanlış yazılırsa not found için.
       </Routes>
     </BrowserRouter>
   );
