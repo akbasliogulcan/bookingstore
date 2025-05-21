@@ -8,19 +8,19 @@ const Products = () => {
   //UseState
   const [books, setState] = useState([]);
 
-  //useSearchParams kurulumu
+  //useSearchParams kurulumu  url almak için
   const [searchParams] = useSearchParams();
 
   //Eğer url'e parametereler geçildiyse bunları al ve  api'a gönder
   const params = {
-    q: searchParams.get("search"), //search filter.jsx den geliyor
+    q: searchParams.get("search"), //search filter.jsx den geliyor  .Filter da arama paramteresi geçtik ve burada yakaladık
     _sort: "title",
     _order: searchParams.get("sort") === "z-a" ? "desc" : "asc", //sort filter.jsx den geliyor
   };
 
-  //Bileşen ekrana geldiğinde  api isteği at ve searchparams ger değiştiğinde tekrar api isteği at
+  //*Bileşen ekrana geldiğinde  api isteği at ve searchparams her değiştiğinde tekrar api isteği at.
   useEffect(() => {
-    api.get("/books", { params }).then((res) => setState(res.data));
+    api.get("/books", { params }).then((res) => setState(res.data)); //params 15.satırdan geliyor
   }, [searchParams]); //searchParams değiştiğinde api isteği at yani arama kısmına yazdığımızda
 
   return (

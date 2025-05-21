@@ -2,31 +2,32 @@ import React from "react";
 import { useSearchParams } from "react-router-dom";
 
 const Filter = () => {
-  //USESearchparams kurulumu
+  //*usesearchparams kurulumu
   const [searchParams, setSearchParams] = useSearchParams();
 
-  //form gönderdildiğinde çalışacak fonksiyon
+  //!form gönderdildiğinde çalışacak fonksiyon
   const handleSubmit = (e) => {
     //sayfa yenilemeyi engelle
     e.preventDefault();
 
-    //inputtaki değere eriş
+    //*inputtaki değere eriş
     const text = e.target[0].value;
 
-    //Url'e geçilecek parametreyi ayarla
+    //*Url'e geçilecek parametreyi ayarla
     searchParams.set("search", text);
-    //hazırlanan parametreyi URL'e ekle
+
+    //*hazırlanan parametreyi URL'e ekle
     setSearchParams(searchParams);
   };
 
-  //Select alanında bir değişim olduğunda çalışacak fonksiyon
+  //!Select alanında bir değişim olduğunda çalışacak fonksiyon
   const handleChange = (e) => {
     const value = e.target.value;
 
-    //select alanında elde edilen değeri URL'e geçilecek parametre olarak ayarla.
+    //*select alanında elde edilen değeri URL'e geçilecek parametre olarak ayarla.
     searchParams.set("sort", value);
 
-    //hazırlanan parametreyi URL'e egeç
+    //*hazırlanan parametreyi URL'e egeç
     searchParams(searchParams);
   };
 

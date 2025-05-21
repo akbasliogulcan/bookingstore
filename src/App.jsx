@@ -5,8 +5,9 @@ import Detail from "./pages/Detail";
 import Header from "./components/Header";
 import Products from "./pages/Products";
 import Category from "./pages/Category";
-import Story from "./components/Story";
-import Noval from "./components/Noval";
+import Story from "./pages/Story";
+import Noval from "./pages/Noval";
+import Notfound from "./pages/Notfound";
 const App = () => {
   return (
     <BrowserRouter>
@@ -15,12 +16,13 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/detay/:id" element={<Detail />} />
         <Route path="/ürünler" element={<Products />} />
-
         {/* Nested root */}
+        //*main
         <Route path="/kategori" element={<Category />}>
-          <Route path="hikaye" element={<Story />} />
-          <Route path="roman" element={<Noval />} />
+          <Route path="hikaye" element={<Story />} /> //*Child
+          <Route path="roman" element={<Noval />} /> //*Child
         </Route>
+        <Route path="*" element={<Notfound />} />
       </Routes>
     </BrowserRouter>
   );
