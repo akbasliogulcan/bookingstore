@@ -1,3 +1,12 @@
+# 📚 Books List Uygulaması
+
+Bu proje, React kullanılarak oluşturulmuş basit bir kitap ya da roman listemele uygulamasıdır.
+
+## 🚀 Özellikler
+
+- Kitapları listeleme
+
+
 ## 🎥 Uygulama Görseli
 
 ![Bookstore Demo](./images/bookstore.gif)
